@@ -1,0 +1,578 @@
+/* @font-face {
+  font-family: 'Alte-Haas-Grotesk';
+  src:url('./fonts/Alte-Haas-Grotesk.ttf.woff') format('woff'),
+      url('./fonts/Alte-Haas-Grotesk.ttf.svg#Alte-Haas-Grotesk') format('svg'),
+      url('./fonts/Alte-Haas-Grotesk.ttf.eot'),
+      url('./fonts/Alte-Haas-Grotesk.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EBGaramond-SemiBold';
+  src:url('./fonts/EBGaramond-SemiBold.woff') format('woff'),
+      url('./fonts/EBGaramond-SemiBold.woff2') format('woff2'),
+      url('./fonts/EBGaramond-SemiBold.svg#EBGaramond-SemiBold') format('svg'),
+      url('./fonts/EBGaramond-SemiBold.eot'),
+      url('./fonts/EBGaramond-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/EBGaramond-SemiBold.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap'); */
+
+
+
+
+
+.App {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif !important;
+  background: #fff;
+  overflow: hidden;
+}
+
+.landing {
+  overflow: hidden;
+}
+/* Video Background */
+.video-container {
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden; 
+}
+
+video {
+min-width: 100%;
+min-height: 100%;
+overflow: hidden; 
+object-fit: cover;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+z-index: -2;
+-o-filter: blur(6px);
+filter: blur(3px);
+}
+
+.videoContainer .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden; 
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  background: rgb(255, 255, 255);
+  opacity: 0.2;
+}
+
+/* Logo */
+
+.logo {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  height: 232px;
+  margin-top: -30px;
+  justify-content: left;
+  filter: blur(0.5px);
+
+}
+
+/* Sign In With Google */
+
+.login {
+  position:absolute;
+  top:10px;
+  right: 10px;
+}
+
+/* About */
+
+.about {
+  position:absolute;
+  top:10px;
+  left: 15px;
+}
+
+/* Landing Page Button Styling */
+
+.landing button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  color: #252525;
+  outline: none;
+  font-family: 'Josefin Sans';
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.landing button:hover,
+button:focus {
+  transform: scale(0.99);
+}
+
+/* .landing button:active {
+  transform: scale(0.99);
+} */
+
+.item button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  color: #252525;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.item button:hover,
+button:focus {
+  transform: scale(1.2);
+  color: rgb(68, 0, 0) !important;
+}
+
+/* .item button:active {
+  transform: scale(1.2);
+  color: rgb(68, 0, 0) !important;
+}  */
+
+
+.commentJs button {
+  display: inline-block;
+  border: none;
+  /* padding: 1rem 2rem; */
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  color: #8b0303;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.commentJs button:hover,
+button:focus {
+  transform: scale(1.2);
+  color: rgb(68, 0, 0) !important;
+}
+
+/* .commentJs button:active {
+  transform: scale(1.2);
+  color: rgb(68, 0, 0) !important;
+}  */
+
+
+.card button:hover,
+button:focus {
+  transform: scale(0.99);
+}
+/* 
+.card button:active {
+  transform: scale(0.99);
+} */
+
+
+/* MODAL */
+.modal {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+  z-index: 1; 
+  width: 100%;
+  height: 100%; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  overflow: auto; 
+  padding-top: 80px; 
+  font-family: 'Josefin Sans', sans-serif;
+}
+/* Modal content */
+.modal-content {
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+  width: 90%; 
+  max-width: 640px; 
+  height: 50%; 
+  margin: auto; 
+  padding: 10px;
+  padding-left: 20px;
+  border: none;
+  opacity: 0.95;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  color: rgb(63, 63, 63);
+}
+/* Close button */
+.close {
+ color: #aaaaaa;
+ float: right; 
+ font-size: 25px;
+ font-weight: bold;
+}
+.close:hover, 
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Menu */
+
+#menuToggle button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  color: #000;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(168, 168, 168);
+  border-bottom-width: 1px;
+  width: 200px;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#menuToggle button:hover,
+button:focus {
+  transform: scale(1.2);
+  /* color: rgb(41, 41, 41) !important; */
+}
+
+/* #menuToggle button:active {
+  transform: scale(1.2);
+  color: rgb(68, 0, 0) !important;
+}  */
+
+.viness-menu {
+  background-image: linear-gradient(to right, rgb(131, 10, 10) 30% , rgb(255, 255, 255));
+}
+
+#menuToggle {
+  background-color: rgb(151, 0, 0);
+}
+#menu {
+ background: transparent
+}
+
+
+#menuToggle
+{
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 250px;
+  /* background-color: transparent; */
+  /* background-size: cover;
+  background-position: center; */
+  /* background-attachment: fixed;  <- here it is */
+  /* background-color: #ededed; */
+  z-index: 1;
+  /* text-align: left; */
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  margin: 0px 0 0 -50px;
+  /* padding: 50px; */
+  padding-top: 80px;
+  
+  /* text-align: center; */
+  
+  /* background: #ededed; */
+  /* background-image: linear-gradient(to right, rgb(131, 10, 10) , rgb(255, 255, 255)); */
+  /* background-size: cover;
+  background-position: center; */
+  /* background-attachment: fixed;   */
+  -webkit-font-smoothing: antialiased;
+
+}
+
+#menuToggle img {
+  padding-left: 5px;
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+  
+}
+
+
+
+.item {
+  padding: 40px !important;
+  text-align: left !important;
+  font-size: 1.4rem !important;
+}
+
+/* .ui.centered.container.stackable.four.column.grid {
+  width: 100% !important;
+  height: 1020px !important;
+  background-color: #FFF !important;
+  position: flex;
+  padding-left: 250px;
+  overflow: scroll;
+} */
+
+.saved-wines {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  width: 100% !important;
+  height: 800px !important;
+  background-color: #FFF !important;
+  position: flex;
+  padding-left: 250px;
+  padding-bottom: 30px !important;
+  /* overflow-x: hidden; */
+  overflow-y: scroll;
+}
+
+.rec-page, .food-pair-page, .pair-page, .wine-info {
+  width: 100% !important;
+  height: 825px !important;
+  background-color: #FFF !important;
+  position: flex;
+  padding-left: 260px;
+  padding-right: 20px;
+  padding-bottom: 30px !important;
+  text-align: center !important;
+  /* overflow-x: hidden; */
+  overflow-y: scroll;
+}
+
+
+/* .saved-wine {
+  float: left;
+} */
+
+.ui.items>.item>.content>.header {
+  font-family: 'Josefin Sans', sans-serif !important;
+  font-size: 1.7rem !important; 
+}
+
+.ui.tiny.image {
+  width: 40px !important;
+  height: 145px !important;
+}
+
+.ui.card>.image>img, .ui.cards>.card>.image>img {
+  width: 290px !important;
+  height: 192px !important;
+  /* padding-left: 80px; */
+  /* height: 145px !important; */
+}
+
+.ui.card>.image, .ui.cards>.card>.image  {
+  text-align: center;
+  justify-content: center;
+  width: 290px;
+  background-color: rgb(255, 255, 255);
+}
+
+.ui.card>.content>.header, .ui.cards>.card>.content>.header {
+  font-family: 'Josefin Sans';
+}
+
+.ui.three.cards {
+  width: 1065px;
+  display: flex;
+}
+
+.ui.card>.content>.header:not(.ui), .ui.cards>.card>.content>.header:not(.ui) {
+  height: 23px !important;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-top: 0em;
+  line-height: 1.1em !important;
+}
+
+.viness-menu {
+  height: 100% !important;
+}
+
+.rec-search {
+  text-align: center;
+}
+
+.ui.form {
+  padding-left: 22%;
+  /* padding-top: 50px; */
+  /* font-family: 'Josefin Sans', sans-serif !important; */
+}
+
+.ui.form .field .ui.input input, .ui.form .fields .field .ui.input input {
+  font-family: 'Josefin Sans', sans-serif !important;
+  font-size: 1.2rem;
+}
+
+.ui.button, .ui.buttons .button, .ui.buttons .or {
+  font-family: 'Josefin Sans', sans-serif !important;
+  font-size: 1.2rem;
+}
+
+.ui.form .fields {
+  font-family: 'Josefin Sans', sans-serif !important;
+  font-size: 1.2rem;
+}
+
+#pair-search-form.ui.form {
+  padding-left: 30%;
+  /* font-family: 'Josefin Sans', sans-serif !important; */
+}
+
+/* #pair-search button {
+  font-family: 'Josefin Sans', sans-serif !important;
+} */
+
+#food-search-form {
+  padding-left: 35%;
+}
+
+#comment-form {
+  padding-left: 375px;
+}
+
+.pair-results {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.paired-wines {
+  padding-left: 100px;
+}
+
+.pair-results li {
+  font-size: 2rem;
+  padding-right: 100px;
+  display: inline-block;
+}
+
+.pair-results p {
+  font-size: 1.5rem;
+  padding-left: -100px !important;
+}
+
+.paired-text, .paired-bottle {
+  padding-top: 30px;
+}
+
+.paired-text {
+  font-size: 1.5rem;
+}
+
+.food-pair-text {
+  padding-top: 30px;
+  font-size: 1.5rem;
+}
+
+.recipes {
+  padding-top: 30px;
+  /* width: 1155px; */
+}
+
+.paired-foods {
+  padding-top: 50px;
+  padding-left: 115px;
+}
+
+.recipe {
+  padding: 10px;
+  /* width: 290px; */
+}
+
+.wine-info {
+  font-family: 'Josefin Sans' !important;
+  /* padding-top: 50px; */
+}
+
+#wine-info h1 h2 h3 h4 p {
+  font-family: 'Josefin Sans' !important;
+}
+
+h1, h2, h3, h4, h5 p {
+  font-family: 'Josefin Sans' !important;
+}
+
+.comments-display {
+  padding-top: 50px;
+  padding-left: 250px;
+}
+
+.ui.comments {
+  text-align: left;
+}
+
+.commentJs button {
+  display: inline-flexbox;
+  /* padding-left: 550px; */
+}
+
+.del-comment {
+  float: right;
+}
+
+.ui.card>.content, .ui.cards>.card>.content {
+  height: 72px;
+}
+
+.ui.container {
+  justify-content: center;
+  text-align: center;
+}
